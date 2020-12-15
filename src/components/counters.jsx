@@ -11,7 +11,9 @@ export default class Counters extends Component {
     ],
   };
   handleDelete = (counterId) => {
-    console.log("Delete button is clicked.", counterId);
+    console.log("Delete button is clicked ", counterId);
+    const counters = this.state.counters.filter((c) => c.id !== counterId);
+    this.setState({ counters: counters });
   };
   render() {
     return (

@@ -30,7 +30,7 @@ class Counter extends Component {
   render() {
     return (
       <React.Fragment>
-        <h3>Counter #{this.props.counter.id}</h3>
+        <h5>Counter #{this.props.counter.id}</h5>
         <span style={this.styles} className={this.getBadgeClasses()}>
           {this.formatCount()}
         </span>

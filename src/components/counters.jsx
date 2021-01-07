@@ -5,7 +5,13 @@ export default class Counters extends Component {
   render() {
     console.log("counters - rendered.");
     //Object Destructuring...
-    const { onReset, onIncrement, onDelete, counters } = this.props;
+    const {
+      onReset,
+      onIncrement,
+      onDelete,
+      counters,
+      onDecrement,
+    } = this.props;
     return (
       <div>
         <button className="btn btn-primary btn-sm m-2" onClick={onReset}>
@@ -17,6 +23,7 @@ export default class Counters extends Component {
             counter={counter}
             onDelete={onDelete}
             onIncrement={onIncrement}
+            onDecrement={onDecrement}
           ></Counter>
         ))}
       </div>
